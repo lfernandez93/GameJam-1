@@ -7,10 +7,14 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.Vector2;
 import com.wisecounsil.whoami.gamestates.MenuState;
 import com.wisecounsil.whoami.utils.CameraHelper;
 import com.wisecounsil.whoami.model.Background;
+import com.wisecounsil.whoami.model.Ball;
 import com.wisecounsil.whoami.model.Entity;
+import com.wisecounsil.whoami.model.Player;
 import com.wisecounsil.whoami.model.Star;
 
 public class WorldController extends InputAdapter {
@@ -20,13 +24,33 @@ public class WorldController extends InputAdapter {
 	public Game game;
 	private List<Entity> layerA;
 	private List<Entity> layerB;
+	private Player player;
+	private Ball ball;
 	
+	public Ball getBall() {
+		return ball;
+	}
+
+	public void setBall(Ball ball) {
+		this.ball = ball;
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
 	public WorldController(){
 		init();
 	}
 	
 	public WorldController(Game game) {
 		this.game=game;
+		player = new Player();
+		ball = new Ball(Color.YELLOW,new Vector2(3,3), new Vector2(5,5));
 		layerA = new ArrayList<Entity>();
 		layerB=new  ArrayList<Entity>();
 		init();
@@ -52,6 +76,9 @@ public class WorldController extends InputAdapter {
 		for(Entity e: layerB){
 			e.update(delta);
 		}
+		ball.update(delta);
+		player.update(delta);
+		
 	}
 	
 	private void updateWorldAndEntities(float delta) {
