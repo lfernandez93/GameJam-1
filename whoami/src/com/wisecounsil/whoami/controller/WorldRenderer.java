@@ -49,7 +49,9 @@ public class WorldRenderer implements Disposable {
 		for(Entity e : worldController.getLayerB()){
 			e.render(batch,sp);
 		}
-		worldController.getBall().render(batch, sp);
+		for(Entity e : worldController.getLayerC()){
+			e.render(batch,sp);
+		}
 		worldController.getPlayer().render(batch, sp);
 		renderGui(batch);
 		sp.end();

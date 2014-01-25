@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.wisecounsil.whoami.gamestates.MenuState;
 import com.wisecounsil.whoami.utils.CameraHelper;
@@ -25,15 +26,7 @@ public class WorldController extends InputAdapter {
 	private List<Entity> layerA;
 	private List<Entity> layerB;
 	private Player player;
-	private Ball ball;
-	
-	public Ball getBall() {
-		return ball;
-	}
-
-	public void setBall(Ball ball) {
-		this.ball = ball;
-	}
+	private List<Entity> layerC;
 
 	public Player getPlayer() {
 		return player;
@@ -50,7 +43,7 @@ public class WorldController extends InputAdapter {
 	public WorldController(Game game) {
 		this.game=game;
 		player = new Player();
-		ball = new Ball(Color.YELLOW,new Vector2(3,3), new Vector2(5,5));
+		layerC=new ArrayList<Entity>();
 		layerA = new ArrayList<Entity>();
 		layerB=new  ArrayList<Entity>();
 		init();
@@ -61,6 +54,9 @@ public class WorldController extends InputAdapter {
 		layerA.add(new Background());
 		for(int i=0;i<=500;i++){
 			layerB.add(new Star());
+		}
+		for(int i=0;i<=7;i++){
+		layerC.add(new Ball(Color.YELLOW,new Vector2(MathUtils.random(0, 800), MathUtils.random(0, 480)), new Vector2(MathUtils.random(0.3f, 5),MathUtils.random(0.3f, 5))));
 		}
 		Gdx.input.setInputProcessor(this);
 		cameraHelper = new CameraHelper();
@@ -76,7 +72,10 @@ public class WorldController extends InputAdapter {
 		for(Entity e: layerB){
 			e.update(delta);
 		}
-		ball.update(delta);
+		for(Entity e: layerC){
+			e.update(delta);
+		}
+
 		player.update(delta);
 		
 	}
@@ -112,5 +111,10 @@ public class WorldController extends InputAdapter {
 	public List<Entity> getLayerB() {
 		// TODO Auto-generated method stub
 		return layerB;
+	}
+
+	public List<Entity> getLayerC() {
+		// TODO Auto-generated method stub
+		return layerC;
 	}
 }
