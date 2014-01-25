@@ -1,0 +1,47 @@
+
+textures.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Ayuda
+  rotate: false
+  xy: 675, 149
+  size: 120, 121
+  orig: 120, 121
+  offset: 0, 0
+  index: -1
+Background1
+  rotate: false
+  xy: 2, 272
+  size: 1000, 750
+  orig: 1000, 750
+  offset: 0, 0
+  index: -1
+Logo
+  rotate: false
+  xy: 2, 2
+  size: 469, 268
+  orig: 469, 268
+  offset: 0, 0
+  index: -1
+PlayButton
+  rotate: false
+  xy: 473, 70
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+Salir
+  rotate: false
+  xy: 797, 149
+  size: 120, 121
+  orig: 120, 121
+  offset: 0, 0
+  index: -1
+The Ball
+  rotate: false
+  xy: 473, 4
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
