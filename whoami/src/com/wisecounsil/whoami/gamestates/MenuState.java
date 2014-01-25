@@ -103,6 +103,9 @@ public class MenuState extends AbstractGameScreen {
 				rebuildStage();
 			}
 		}
+		
+		
+		
 		stage.act(delta);
 		stage.draw();
 		Table.drawDebug(stage);

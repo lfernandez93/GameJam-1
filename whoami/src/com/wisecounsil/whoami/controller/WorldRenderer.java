@@ -1,26 +1,33 @@
 package com.wisecounsil.whoami.controller;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.utils.Disposable;
+import com.wisecounsil.whoami.model.Entity;
 import com.wisecounsil.whoami.utils.Assets;
 import com.wisecounsil.whoami.utils.Constants;
 
 public class WorldRenderer implements Disposable {
-
+	public static String TAG=WorldRenderer.class.getName();
 	private OrthographicCamera camera;
 	private OrthographicCamera cameraGUI;
 	private SpriteBatch batch;
+	private ShapeRenderer sp;
 	private WorldController worldController;
 	
 	public WorldRenderer(WorldController worldController){
+		this.worldController=worldController;
 		init();
 	}
 	
 	private void init(){
 		batch = new SpriteBatch();
+		sp = new ShapeRenderer();
 		camera = new OrthographicCamera(Constants.VIEWPORT_WIDTH,
 		Constants.VIEWPORT_HEIGHT);
 		camera.position.set(0, 0, 0);
@@ -33,8 +40,19 @@ public class WorldRenderer implements Disposable {
 	}
 	
 	public void render(){
-		
+		batch.begin();
+		sp.begin(ShapeType.Filled);
+		sp.setColor(1,1,1,1);
+		for(Entity e : worldController.getLayerA()){
+			e.render(batch,sp);
+		}
+		for(Entity e : worldController.getLayerB()){
+			e.render(batch,sp);
+		}
 		renderGui(batch);
+		sp.end();
+		batch.end();
+		
 	}
 	
 	public void resize(int width, int height){
@@ -75,7 +93,7 @@ public class WorldRenderer implements Disposable {
 	
 	private void renderGui (SpriteBatch batch) {
 		batch.setProjectionMatrix(cameraGUI.combined);
-		batch.begin();
+		//batch.begin();
 		// draw collected gold coins icon + text
 		// (anchored to top left edge)
 		//renderGuiScore(batch);
@@ -83,6 +101,6 @@ public class WorldRenderer implements Disposable {
 		//renderGuiExtraLive(batch);
 		// draw FPS text (anchored to bottom right edge)
 		renderGuiFpsCounter(batch);
-		batch.end();
+		//batch.end();
 		}
 }

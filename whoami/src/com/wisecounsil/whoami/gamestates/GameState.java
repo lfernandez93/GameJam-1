@@ -37,10 +37,7 @@ public class GameState extends AbstractGameScreen {
 			worldController.update(delta);
 		}
 		
-		Gdx.gl.glClearColor(0x64 / 255.0f,
-				0x95 / 255.0f,
-				0xed / 255.0f,
-				0xff / 255.0f);
+		Gdx.gl.glClearColor(0,0,0,1);
 		
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		

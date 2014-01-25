@@ -1,22 +1,30 @@
 package com.wisecounsil.whoami.model;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.math.Vector2;
+import com.wisecounsil.whoami.utils.Assets;
 
-public class StaticEntity implements Entity {
+public class Background implements Entity {
+
+	private TextureRegion back;
 	
-	public Vector2 position;
-	
-	public StaticEntity(Vector2 position) {
-		super();
-		this.position = position;
+	public Background(){
+		init();
 	}
-
+	
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
-		
+		back=Assets.instance.menuBackground.back;
+	}
+
+	@Override
+	public void render(SpriteBatch batch) {
+		// TODO Auto-generated method stub
+		batch.begin();
+		batch.draw(back.getTexture(), 0,0);
+		batch.end();
 	}
 
 	@Override
@@ -27,12 +35,6 @@ public class StaticEntity implements Entity {
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void render(SpriteBatch batch) {
 		// TODO Auto-generated method stub
 		
 	}

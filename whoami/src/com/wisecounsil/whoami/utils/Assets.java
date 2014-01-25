@@ -81,12 +81,13 @@ public class Assets implements Disposable, AssetErrorListener {
 					.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		}
 	}
-}
+	public class AssetMenuBackground {
+		public final AtlasRegion back;
 
-class AssetMenuBackground {
-	public final AtlasRegion back;
-
-	public AssetMenuBackground(TextureAtlas atlas) {
-		back = atlas.findRegion("Background1");
+		public AssetMenuBackground(TextureAtlas atlas) {
+			back = atlas.findRegion("Background1");
+		}
 	}
+
 }
+
