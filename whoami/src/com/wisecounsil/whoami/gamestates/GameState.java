@@ -3,13 +3,13 @@ package com.wisecounsil.whoami.gamestates;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
+import com.jotase.view.WorldRenderer;
 import com.wisecounsil.whoami.AbstractGameScreen;
 import com.wisecounsil.whoami.controller.WorldController;
-import com.wisecounsil.whoami.controller.WorldRenderer;
 
 public class GameState extends AbstractGameScreen {
 
-	private WorldController worldController;
+	//private WorldController worldController;
 	private WorldRenderer worldRenderer;
 	
 	private static final String TAG = GameState.class.getName();
@@ -34,7 +34,7 @@ public class GameState extends AbstractGameScreen {
 	public void render(float delta) {
 		
 		if(!paused){
-			worldController.update(delta);
+			//worldController.update(delta);
 		}
 		
 		Gdx.gl.glClearColor(0,0,0,1);
@@ -48,7 +48,7 @@ public class GameState extends AbstractGameScreen {
 
 	@Override
 	public void resize(int width, int height) {
-		worldRenderer.resize(width,height);
+		//worldRenderer.resize(width,height);
 		
 		// TODO Auto-generated method stub
 		
@@ -56,8 +56,8 @@ public class GameState extends AbstractGameScreen {
 
 	@Override
 	public void show() {
-		worldController = new WorldController(game);
-		worldRenderer = new WorldRenderer(worldController);
+		//worldController = new WorldController(game);
+	    worldRenderer = new WorldRenderer(game);
 		Gdx.input.setCatchBackKey(true);
 		// TODO Auto-generated method stub
 		
@@ -65,7 +65,7 @@ public class GameState extends AbstractGameScreen {
 
 	@Override
 	public void hide() {
-		worldRenderer.dispose();
+		//worldRenderer.dispose();
 		Gdx.input.setCatchBackKey(false);
 		// TODO Auto-generated method stub
 		

@@ -1,0 +1,75 @@
+
+Sprites.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+portal
+  rotate: false
+  xy: 1, 43
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 1, 1
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 67, 67
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 109, 67
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 151, 67
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 193, 67
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 43, 1
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 85, 25
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+asteorid
+  rotate: false
+  xy: 127, 25
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 169, 25
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1

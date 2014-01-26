@@ -70,7 +70,7 @@ public class HelpState extends AbstractGameScreen{
 			}
 		});
 		layer.add(btnMenuExit);
-		layer.add(btnMenuPlay);
+		//layer.add(btnMenuPlay);
 
 		if (debugEnabled) layer.debug();
 		return layer;
@@ -88,7 +88,7 @@ public class HelpState extends AbstractGameScreen{
 
 	private Table buildBackgroundLayer() {
 		Table layer = new Table();
-		imgBackground = new Image(skinWhoAmI, "GameScreen");
+		imgBackground = new Image(skinWhoAmI, "helpscreen");
 		layer.add(imgBackground);
 		return layer;
 	}

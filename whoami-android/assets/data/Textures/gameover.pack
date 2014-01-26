@@ -1,0 +1,33 @@
+
+gameover.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+again
+  rotate: false
+  xy: 494, 180
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+again pressed
+  rotate: false
+  xy: 494, 287
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+gameover
+  rotate: false
+  xy: 2, 2
+  size: 490, 490
+  orig: 490, 490
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 494, 394
+  size: 231, 98
+  orig: 231, 98
+  offset: 0, 0
+  index: -1

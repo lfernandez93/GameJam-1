@@ -1,0 +1,157 @@
+
+menu.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 937, 810
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 804, 329
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 44, 2
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 937, 768
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 804, 287
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 86, 2
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 804, 245
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+GameScreen
+  rotate: false
+  xy: 2, 526
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+Help
+  rotate: false
+  xy: 804, 449
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Help pressed
+  rotate: false
+  xy: 937, 930
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Play
+  rotate: false
+  xy: 804, 741
+  size: 131, 131
+  orig: 131, 131
+  offset: 0, 0
+  index: -1
+Play pressed
+  rotate: false
+  xy: 804, 874
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+Salir
+  rotate: false
+  xy: 804, 371
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Salir pressed
+  rotate: false
+  xy: 937, 852
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Who Am I
+  rotate: false
+  xy: 2, 44
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+again
+  rotate: false
+  xy: 804, 527
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+again pressed
+  rotate: false
+  xy: 804, 634
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+
+menu2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Logo
+  rotate: false
+  xy: 2, 102
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+gameover
+  rotate: false
+  xy: 344, 107
+  size: 335, 335
+  orig: 335, 335
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 2, 2
+  size: 231, 98
+  orig: 231, 98
+  offset: 0, 0
+  index: -1
