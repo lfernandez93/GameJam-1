@@ -3,11 +3,13 @@ package com.wisecounsil.whoami;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Music;
 import com.wisecounsil.whoami.utils.Assets;
 
 public abstract class AbstractGameScreen implements Screen{
 	protected Game game;
-	
+	protected Music music;
+
 	public AbstractGameScreen(Game game){
 		this.game=game;
 	}
@@ -20,10 +22,12 @@ public abstract class AbstractGameScreen implements Screen{
 	
 	public void resume(){
 		Assets.instance.init(new AssetManager());
+		music.play();
 	}
 	
 	public void dispose(){
 		Assets.instance.dispose();
+		music.dispose();
 	}
 		
 }

@@ -3,6 +3,7 @@ package com.wisecounsil.whoami.gamestates;
 import com.badlogic.gdx.Files.FileType;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -30,9 +31,12 @@ public class MenuState extends AbstractGameScreen {
 	private final float DEBUG_REBUILD_INTERVAL = 5.0f;
 	private boolean debugEnabled = false;
 	private float debugRebuildStage;
-
+	
 	public MenuState(Game game) {
 		super(game);
+		music=Gdx.audio.newMusic(
+				Gdx.files.internal("data/music/Menu.MP3"));
+		music.play();
 	}
 
 	private void rebuildStage() {
@@ -112,10 +116,12 @@ public class MenuState extends AbstractGameScreen {
 
 	protected void onHelpClicked() {
 		// TODO Auto-generated method stub
-		game.setScreen(new GameOverState(game));
+		music.dispose();
+		game.setScreen(new HelpState(game));
 	}
 
 	protected void onPlayClicked() {
+		music.dispose();
 		game.setScreen(new GameState(game));		
 	}
 

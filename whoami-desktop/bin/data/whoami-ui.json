@@ -7,6 +7,10 @@ exit: { down: Salirpressed, up: Salir },
 },
 com.badlogic.gdx.scenes.scene2d.ui.Image: {
 background: { drawable: GameScreen },
+wina: { drawable: winmessage},
+youwin: { drawable: youwin },
 logo: { drawable: WhoAmI },
+gameover: {drawable: gameover},
+text: {drawable: text},
 },
 }                      

@@ -5,128 +5,135 @@ filter: Nearest,Nearest
 repeat: none
 1
   rotate: false
-  xy: 2, 2
+  xy: 937, 798
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 2
   rotate: false
-  xy: 937, 810
+  xy: 804, 317
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 3
   rotate: false
-  xy: 804, 329
+  xy: 937, 756
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 4
   rotate: false
-  xy: 44, 2
+  xy: 804, 275
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 5
   rotate: false
-  xy: 937, 768
+  xy: 804, 233
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 6
   rotate: false
-  xy: 804, 287
+  xy: 804, 191
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 7
   rotate: false
-  xy: 86, 2
+  xy: 804, 149
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 8
   rotate: false
-  xy: 804, 245
+  xy: 804, 107
   size: 40, 40
   orig: 40, 40
   offset: 0, 0
   index: -1
 GameScreen
   rotate: false
-  xy: 2, 526
+  xy: 2, 514
   size: 800, 480
   orig: 800, 480
   offset: 0, 0
   index: -1
 Help
   rotate: false
-  xy: 804, 449
+  xy: 937, 918
   size: 76, 76
   orig: 76, 76
   offset: 0, 0
   index: -1
 Helppressed
   rotate: false
-  xy: 937, 930
+  xy: 804, 437
   size: 76, 76
   orig: 76, 76
   offset: 0, 0
   index: -1
 Play
   rotate: false
-  xy: 804, 741
+  xy: 804, 729
   size: 131, 131
   orig: 131, 131
   offset: 0, 0
   index: -1
 Playpressed
   rotate: false
-  xy: 804, 874
+  xy: 804, 862
   size: 131, 132
   orig: 131, 132
   offset: 0, 0
   index: -1
 Salir
   rotate: false
-  xy: 804, 371
+  xy: 937, 840
   size: 76, 76
   orig: 76, 76
   offset: 0, 0
   index: -1
 Salirpressed
   rotate: false
-  xy: 937, 852
+  xy: 804, 359
   size: 76, 76
   orig: 76, 76
   offset: 0, 0
   index: -1
 WhoAmI
   rotate: false
-  xy: 2, 44
+  xy: 2, 32
   size: 800, 480
   orig: 800, 480
   offset: 0, 0
   index: -1
 again
   rotate: false
-  xy: 804, 527
+  xy: 804, 622
   size: 105, 105
   orig: 105, 105
   offset: 0, 0
   index: -1
 againpressed
   rotate: false
-  xy: 804, 634
+  xy: 804, 515
   size: 105, 105
   orig: 105, 105
+  offset: 0, 0
+  index: -1
+text2
+  rotate: false
+  xy: 2, 2
+  size: 238, 28
+  orig: 238, 28
   offset: 0, 0
   index: -1
 
@@ -141,9 +148,16 @@ Logo
   orig: 340, 340
   offset: 0, 0
   index: -1
+winmessage
+  rotate: false
+  xy: 2, 444
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
 gameover
   rotate: false
-  xy: 344, 107
+  xy: 686, 107
   size: 335, 335
   orig: 335, 335
   offset: 0, 0
@@ -153,5 +167,12 @@ text
   xy: 2, 2
   size: 231, 98
   orig: 231, 98
+  offset: 0, 0
+  index: -1
+youwin
+  rotate: false
+  xy: 344, 102
+  size: 340, 340
+  orig: 340, 340
   offset: 0, 0
   index: -1
