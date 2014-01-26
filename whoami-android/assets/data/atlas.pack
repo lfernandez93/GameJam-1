@@ -1,0 +1,101 @@
+
+menu.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+GameScreen
+  rotate: false
+  xy: 2, 484
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+Help
+  rotate: false
+  xy: 804, 407
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Help pressed
+  rotate: false
+  xy: 937, 888
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Play
+  rotate: false
+  xy: 804, 699
+  size: 131, 131
+  orig: 131, 131
+  offset: 0, 0
+  index: -1
+Play pressed
+  rotate: false
+  xy: 804, 832
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+Salir
+  rotate: false
+  xy: 804, 329
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Salir pressed
+  rotate: false
+  xy: 937, 810
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+Who Am I
+  rotate: false
+  xy: 2, 2
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+again
+  rotate: false
+  xy: 804, 485
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+again pressed
+  rotate: false
+  xy: 804, 592
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+
+menu2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Logo
+  rotate: false
+  xy: 2, 102
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+gameover
+  rotate: false
+  xy: 344, 107
+  size: 335, 335
+  orig: 335, 335
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 2, 2
+  size: 231, 98
+  orig: 231, 98
+  offset: 0, 0
+  index: -1
