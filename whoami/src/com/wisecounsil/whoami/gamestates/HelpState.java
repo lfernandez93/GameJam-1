@@ -1,6 +1,5 @@
 package com.wisecounsil.whoami.gamestates;
 
-import com.badlogic.gdx.Files.FileType;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
@@ -15,31 +14,29 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.wisecounsil.whoami.AbstractGameScreen;
-import com.wisecounsil.whoami.utils.Assets;
 import com.wisecounsil.whoami.utils.Constants;
 
-public class MenuState extends AbstractGameScreen {
+public class HelpState extends AbstractGameScreen{
+	private Image imgBackground;
 	private Stage stage;
 	private Skin skinWhoAmI;
-	private Image imgBackground;
-	private Image imgLogo;
 	private Button btnMenuPlay;
-	private Button btnMenuHelp;
-	private Button btnMenuExit;
 	public static String TAG = MenuState.class.getName();
 	private final float DEBUG_REBUILD_INTERVAL = 5.0f;
 	private boolean debugEnabled = false;
 	private float debugRebuildStage;
-
-	public MenuState(Game game) {
+	private Button btnMenuExit;
+	
+	
+	public HelpState(Game game) {
 		super(game);
+		// TODO Auto-generated constructor stub
 	}
 
 	private void rebuildStage() {
 		skinWhoAmI = new Skin(Gdx.files.internal(Constants.SKIN_CANYONBUNNY_UI),
 				new TextureAtlas(Constants.TEXTURE_ATLAS_UI));
 		Table layerBackground = buildBackgroundLayer();
-		Table layerLogos = buildLogosLayer();
 		Table layerControls = buildControlsLayer();
 		stage.clear();
 		Stack stack = new Stack();
@@ -48,32 +45,11 @@ public class MenuState extends AbstractGameScreen {
 				Constants.VIEWPORT_GUI_HEIGHT);
 		stack.add(layerBackground);
 		stack.add(layerControls);
-		stack.add(layerLogos);
 	}
-
-	private Table buildBackgroundLayer() {
-		Table layer = new Table();
-		imgBackground = new Image(skinWhoAmI, "GameScreen");
-		layer.add(imgBackground);
-		return layer;
-	}
-
-	private Table buildLogosLayer() {
-		Table layer = new Table();
-		layer.center().top();
-		// + Game Logo
-		imgLogo = new Image(skinWhoAmI, "Logo");
-		layer.add(imgLogo);
-		layer.row().expandY();
-		// + Info Logos
-		
-		if (debugEnabled) layer.debug();
-		return layer;
-	}
-
+	
 	private Table buildControlsLayer() {
 		Table layer = new Table();
-		layer.center().bottom();
+		layer.right().bottom();
 		btnMenuPlay = new Button(skinWhoAmI, "play");
 		btnMenuPlay.addListener(new ChangeListener() {
 		
@@ -84,43 +60,42 @@ public class MenuState extends AbstractGameScreen {
 			}
 		});
 		layer.row();
-		btnMenuHelp = new Button(skinWhoAmI, "help");
 		btnMenuExit = new Button(skinWhoAmI, "exit");
-		layer.add(btnMenuExit);
-		layer.add(btnMenuPlay);
-		layer.add(btnMenuHelp);
-		btnMenuHelp.addListener(new ChangeListener(){
+		btnMenuExit.addListener(new ChangeListener() {
+		
 			@Override
-			public void changed(ChangeEvent event, Actor actor){
-				onHelpClicked();
-			}
-		});
-		btnMenuExit.addListener(new ChangeListener(){
-			@Override
-			public void changed(ChangeEvent event, Actor actor){
+			public void changed(ChangeEvent event, Actor actor) {
+				// TODO Auto-generated method stub
 				onExitClicked();
 			}
 		});
+		layer.add(btnMenuExit);
+		layer.add(btnMenuPlay);
+
 		if (debugEnabled) layer.debug();
 		return layer;
 	}
 
 	protected void onExitClicked() {
 		// TODO Auto-generated method stub
-		Gdx.app.exit();
-	}
-
-	protected void onHelpClicked() {
-		// TODO Auto-generated method stub
-		game.setScreen(new HelpState(game));
+		game.setScreen(new MenuState(game));
 	}
 
 	protected void onPlayClicked() {
-		game.setScreen(new GameState(game));		
+		// TODO Auto-generated method stub
+		game.setScreen(new GameState(game));
+	}
+
+	private Table buildBackgroundLayer() {
+		Table layer = new Table();
+		imgBackground = new Image(skinWhoAmI, "GameScreen");
+		layer.add(imgBackground);
+		return layer;
 	}
 
 	@Override
 	public void render(float delta) {
+		// TODO Auto-generated method stub
 
 		Gdx.gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
@@ -148,6 +123,7 @@ public class MenuState extends AbstractGameScreen {
 	public void resize(int width, int height) {
 		stage.setViewport(Constants.VIEWPORT_GUI_WIDTH,
 				Constants.VIEWPORT_GUI_HEIGHT, false);
+		
 	}
 
 	@Override
@@ -166,7 +142,7 @@ public class MenuState extends AbstractGameScreen {
 	@Override
 	public void pause() {
 		// TODO Auto-generated method stub
-
+		
 	}
-
+	
 }

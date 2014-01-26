@@ -1,7 +1,7 @@
 package com.wisecounsil.whoami.utils;
 
 public class Constants {
-	public static final String TEXTURE_ATLAS_OBJECTS = "data/textures.pack";
+	public static final String TEXTURE_ATLAS_OBJECTS = "data/menu.pack";
 	public static final float VIEWPORT_WIDTH = 5.0f;
 	public static final float VIEWPORT_HEIGHT = 5.0f;
 	// GUI Width
@@ -15,5 +15,5 @@ public class Constants {
 	// Location of description file for skins
 	public static final String SKIN_LIBGDX_UI = "images/uiskin.json";
 	public static final String SKIN_CANYONBUNNY_UI = "data/whoami-ui.json";
-	public static final String TEXTURE_ATLAS_UI = "data/textures.pack";
+	public static final String TEXTURE_ATLAS_UI = "data/menu.pack";
 }

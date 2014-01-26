@@ -1,12 +1,12 @@
 {
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
-play: { down: PlayButton, up: PlayButton },
-options: { down: Ayuda, up: Ayuda }
+play: { down: Playpressed, up: Play },
+help: { down: Helppressed, up: Help },
+exit: { down: Salirpressed, up: Salir },
+
 },
 com.badlogic.gdx.scenes.scene2d.ui.Image: {
-background: { drawable: Background1 },
-logo: { drawable: Logo },
-
-
+background: { drawable: GameScreen },
+logo: { drawable: WhoAmI },
 },
-}
+}                      
