@@ -31,6 +31,9 @@ public class GameOverState extends AbstractGameScreen {
 
 	public GameOverState(Game game) {
 		super(game);
+		music=Gdx.audio.newMusic(
+				Gdx.files.internal("data/music/Gameover.MP3"));
+		music.play();
 	}
 
 	private void rebuildStage() {
@@ -58,34 +61,22 @@ public class GameOverState extends AbstractGameScreen {
 
 	private Table buildLogosLayer() {
 		Table layer = new Table();
-		layer.center().top();
+		layer.center();
 		// + Game Logo
 		imgLogo = new Image(skinWhoAmI, "gameover");
 		layer.add(imgLogo);
 		layer.row().expandY();
 		// + Info Logos
-		layer.center().bottom();
+		//layer.center().bottom();
 		// + Game Logo
-		imgLogo = new Image(skinWhoAmI, "text");
-		layer.add(imgLogo);
-		layer.row().expandY();
-		btnMenuPlay = new Button(skinWhoAmI, "again");
-		btnMenuPlay.addListener(new ChangeListener() {
 		
-			@Override
-			public void changed(ChangeEvent event, Actor actor) {
-				// TODO Auto-generated method stub
-				onPlayClicked();
-			}
-		});
-		layer.add(btnMenuPlay);
 		if (debugEnabled) layer.debug();
 		return layer;
 	}
 
 	private Table buildControlsLayer() {
 		Table layer = new Table();
-		layer.center().bottom();
+		layer.right().bottom();
 		btnMenuPlay = new Button(skinWhoAmI, "again");
 		btnMenuPlay.addListener(new ChangeListener() {
 		
@@ -95,6 +86,11 @@ public class GameOverState extends AbstractGameScreen {
 				onPlayClicked();
 			}
 		});
+		imgLogo = new Image(skinWhoAmI, "text");
+		layer.add(imgLogo);
+		//layer.row().expandY();
+		layer.add(btnMenuPlay);
+
 		layer.row();
 		
 		if (debugEnabled) layer.debug();

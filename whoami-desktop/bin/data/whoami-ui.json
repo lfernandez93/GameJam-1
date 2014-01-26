@@ -3,6 +3,7 @@ com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 play: { down: Playpressed, up: Play },
 help: { down: Helppressed, up: Help },
 exit: { down: Salirpressed, up: Salir },
+again: { down: againpressed, up: again },
 
 },
 com.badlogic.gdx.scenes.scene2d.ui.Image: {
