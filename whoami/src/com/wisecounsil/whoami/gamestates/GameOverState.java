@@ -1,6 +1,5 @@
 package com.wisecounsil.whoami.gamestates;
 
-import com.badlogic.gdx.Files.FileType;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
@@ -15,23 +14,22 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.wisecounsil.whoami.AbstractGameScreen;
-import com.wisecounsil.whoami.utils.Assets;
 import com.wisecounsil.whoami.utils.Constants;
 
-public class MenuState extends AbstractGameScreen {
+public class GameOverState extends AbstractGameScreen {
 	private Stage stage;
 	private Skin skinWhoAmI;
 	private Image imgBackground;
 	private Image imgLogo;
+	private Image text;
+
 	private Button btnMenuPlay;
-	private Button btnMenuHelp;
-	private Button btnMenuExit;
 	public static String TAG = MenuState.class.getName();
 	private final float DEBUG_REBUILD_INTERVAL = 5.0f;
 	private boolean debugEnabled = false;
 	private float debugRebuildStage;
 
-	public MenuState(Game game) {
+	public GameOverState(Game game) {
 		super(game);
 	}
 
@@ -62,11 +60,25 @@ public class MenuState extends AbstractGameScreen {
 		Table layer = new Table();
 		layer.center().top();
 		// + Game Logo
-		imgLogo = new Image(skinWhoAmI, "Logo");
+		imgLogo = new Image(skinWhoAmI, "gameover");
 		layer.add(imgLogo);
 		layer.row().expandY();
 		// + Info Logos
+		layer.center().bottom();
+		// + Game Logo
+		imgLogo = new Image(skinWhoAmI, "text");
+		layer.add(imgLogo);
+		layer.row().expandY();
+		btnMenuPlay = new Button(skinWhoAmI, "again");
+		btnMenuPlay.addListener(new ChangeListener() {
 		
+			@Override
+			public void changed(ChangeEvent event, Actor actor) {
+				// TODO Auto-generated method stub
+				onPlayClicked();
+			}
+		});
+		layer.add(btnMenuPlay);
 		if (debugEnabled) layer.debug();
 		return layer;
 	}
@@ -74,7 +86,7 @@ public class MenuState extends AbstractGameScreen {
 	private Table buildControlsLayer() {
 		Table layer = new Table();
 		layer.center().bottom();
-		btnMenuPlay = new Button(skinWhoAmI, "play");
+		btnMenuPlay = new Button(skinWhoAmI, "again");
 		btnMenuPlay.addListener(new ChangeListener() {
 		
 			@Override
@@ -84,23 +96,7 @@ public class MenuState extends AbstractGameScreen {
 			}
 		});
 		layer.row();
-		btnMenuHelp = new Button(skinWhoAmI, "help");
-		btnMenuExit = new Button(skinWhoAmI, "exit");
-		layer.add(btnMenuExit);
-		layer.add(btnMenuPlay);
-		layer.add(btnMenuHelp);
-		btnMenuHelp.addListener(new ChangeListener(){
-			@Override
-			public void changed(ChangeEvent event, Actor actor){
-				onHelpClicked();
-			}
-		});
-		btnMenuExit.addListener(new ChangeListener(){
-			@Override
-			public void changed(ChangeEvent event, Actor actor){
-				onExitClicked();
-			}
-		});
+		
 		if (debugEnabled) layer.debug();
 		return layer;
 	}
@@ -112,7 +108,7 @@ public class MenuState extends AbstractGameScreen {
 
 	protected void onHelpClicked() {
 		// TODO Auto-generated method stub
-		game.setScreen(new GameOverState(game));
+		game.setScreen(new HelpState(game));
 	}
 
 	protected void onPlayClicked() {
@@ -170,3 +166,4 @@ public class MenuState extends AbstractGameScreen {
 	}
 
 }
+
